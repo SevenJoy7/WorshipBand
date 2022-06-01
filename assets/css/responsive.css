@@ -1,0 +1,107 @@
+/* pc */
+
+@media (min-width: 1024px) {
+    #header .mobile-menu {
+        display: none;
+    }
+}
+
+
+/* tablet & mobile */
+
+@media (max-width: 1023px) {
+    #content .place-buy-btn {
+        width: 100%;
+        padding: 15px 0;
+    }
+    .form-sub-btn {
+        padding: 15px 0;
+        width: 100%;
+    }
+    #content .form-control {
+        padding: 15px 16px;
+    }
+    #footer .social-list>a {
+        margin: 0 5px;
+    }
+    #footer .social-list .link-band a {
+        display: inline-block;
+        padding: 12px 0;
+    }
+    #content .info-2 {
+        line-height: 2;
+    }
+    .overlay-member__info a {
+        left: 40px;
+    }
+}
+
+
+/* tablet */
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    #header .mobile-menu {
+        display: none;
+    }
+}
+
+
+/* mobile */
+
+@media (max-width: 740px) {
+    .m-t-8 {
+        margin-top: 8px;
+    }
+    #header {
+        overflow: hidden;
+    }
+    #nav {
+        display: block;
+    }
+    #nav .subnav {
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav a {
+        color: #fff;
+        padding: 5px 41px;
+    }
+    #nav>li {
+        display: block;
+    }
+    #nav li a {
+        padding: 1px 24px;
+    }
+    #nav>li:first-child {
+        display: inline-block;
+    }
+    #header .nav-search {
+        display: none;
+    }
+    .member-item {
+        width: 100%;
+    }
+    #content .about-img {
+        width: 50%;
+    }
+    .place-item {
+        margin-bottom: 16px;
+    }
+    #slider .text-slider {
+        display: none;
+    }
+    #slider .dot-item {
+        width: 5px;
+        height: 5px;
+    }
+    #content .member-item .about-name {
+        margin-top: 30px;
+    }
+    #content .info-2 {
+        margin-bottom: 25px;
+    }
+    .overlay-member__info a {
+        left: 90px;
+        width: 180px;
+    }
+}
