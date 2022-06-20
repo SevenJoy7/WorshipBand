@@ -1,4 +1,17 @@
-// Automatic Slideshow - change image every 4 seconds
+// ẩn hiện active
+var navLinks = document.getElementsByClassName("nav-link");
+
+function hienNav () {
+    modal.classList.add('active');
+}
+
+for (const navLink of navLinks) {
+    navLinks.addEventListener('click', hienNav);
+}
+
+function anNav() {
+    navLinks.classList.remove('active');
+}
 
 //khai báo biến slideIndex đại diện cho slide hiện tại
 var slideIndex;
@@ -30,20 +43,7 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-// var myIndex = 0; //khai báo biến slide hiện tại
-// carousel(); // băng chuyền
 
-// function carousel() {
-// var i;
-// var x = document.getElementsByClassName("slidershow");
-// for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";  
-// }
-// myIndex++;
-// if (myIndex > x.length) {myIndex = 1}    
-// x[myIndex-1].style.display = "block";  
-// setTimeout(carousel, 4000);    
-// }
 
 //  mobile-menu
 var header = document.querySelector('#header');
@@ -58,7 +58,7 @@ mobileMenu.onclick = function() {
             header.style.height = null;
         }
     }
-    //tự động đóng menu khi chọn
+//tự động đóng menu khi chọn
 var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
 for (var i = 0; i < menuItems.length; i++) {
     var menuItem = menuItems[i];
@@ -81,6 +81,7 @@ const closeModal = document.querySelector('.js-modal-close');
 function showModalTicket() {
     modal.classList.add('open');
 }
+
 for (const buyBtn of buyBtns) {
     buyBtn.addEventListener('click', showModalTicket);
 }
@@ -88,11 +89,8 @@ for (const buyBtn of buyBtns) {
 function hiddenBuyTicket() {
     modal.classList.remove('open');
 }
-closeModal.addEventListener('click', hiddenBuyTicket);
 
-function hiddenBuyTicket() {
-    modal.classList.remove('open');
-}
+closeModal.addEventListener('click', hiddenBuyTicket);
 modal.addEventListener('click', hiddenBuyTicket);
 
 modalContainer.addEventListener('click', function(event) {
