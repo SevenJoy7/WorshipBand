@@ -1,18 +1,3 @@
-// ẩn hiện active
-var navLinks = document.getElementsByClassName("nav-link");
-
-function hienNav () {
-    modal.classList.add('active');
-}
-
-for (const navLink of navLinks) {
-    navLinks.addEventListener('click', hienNav);
-}
-
-function anNav() {
-    navLinks.classList.remove('active');
-}
-
 //khai báo biến slideIndex đại diện cho slide hiện tại
 var slideIndex;
 
@@ -43,8 +28,6 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-
-
 //  mobile-menu
 var header = document.querySelector('#header');
 var mobileMenu = document.querySelector('.mobile-menu');
@@ -58,7 +41,7 @@ mobileMenu.onclick = function() {
             header.style.height = null;
         }
     }
-//tự động đóng menu khi chọn
+    //tự động đóng menu khi chọn
 var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
 for (var i = 0; i < menuItems.length; i++) {
     var menuItem = menuItems[i];
@@ -81,7 +64,6 @@ const closeModal = document.querySelector('.js-modal-close');
 function showModalTicket() {
     modal.classList.add('open');
 }
-
 for (const buyBtn of buyBtns) {
     buyBtn.addEventListener('click', showModalTicket);
 }
@@ -89,8 +71,11 @@ for (const buyBtn of buyBtns) {
 function hiddenBuyTicket() {
     modal.classList.remove('open');
 }
-
 closeModal.addEventListener('click', hiddenBuyTicket);
+
+function hiddenBuyTicket() {
+    modal.classList.remove('open');
+}
 modal.addEventListener('click', hiddenBuyTicket);
 
 modalContainer.addEventListener('click', function(event) {
